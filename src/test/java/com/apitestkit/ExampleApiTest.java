@@ -7,7 +7,6 @@ import com.apitestkit.config.ConfigLoader;
 import com.apitestkit.http.ApiClient;
 import com.apitestkit.http.ApiRequest;
 import com.apitestkit.tls.TlsConfig;
-import com.apitestkit.tls.TlsMode;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 
@@ -81,4 +80,6 @@ public class ExampleApiTest {
         ResponseAssertions.assertThat(response)
                 .status(200);
     }
+
 }
+
