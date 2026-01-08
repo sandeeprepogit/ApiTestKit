@@ -1,0 +1,39 @@
+
+environment: qa
+baseUrl: "https://your-qa-domain.example.com"
+
+defaultHeaders:
+  Accept: "application/json"
+
+maskedHeaders:
+  - Authorization
+  - X-Api-Key
+
+maskedJsonFields:
+  - password
+  - secret
+  - token
+  - clientSecret
+
+timeouts:
+  connectTimeoutMs: 10000
+  socketTimeoutMs: 30000
+  connectionRequestTimeoutMs: 10000
+
+proxy:
+  enabled: false
+  host: "proxy.example.com"
+  port: 8080
+  scheme: "http"
+
+retry:
+  enabled: true
+  maxAttempts: 3
+  baseDelayMs: 250
+  maxDelayMs: 2000
+  multiplier: 2.0
+  retryOnStatusCodes: [429, 500, 502, 503, 504]
+
+tls:
+  mode: "RELAXED_QA"   # DEFAULT, TRUSTSTORE, RELAXED_QA, MTLS
+  enabledProtocols: ["TLSv1.2", "TLSv1.3"]
