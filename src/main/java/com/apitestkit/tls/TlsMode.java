@@ -1,4 +1,9 @@
+
 package com.apitestkit.tls;
 
-public class TlsMode {
+public enum TlsMode {
+    DEFAULT,
+    TRUSTSTORE,
+    RELAXED_QA,
+    MTLS
 }

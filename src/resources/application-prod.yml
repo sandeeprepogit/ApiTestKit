@@ -1,0 +1,31 @@
+
+environment: prod
+baseUrl: "https://your-prod-domain.example.com"
+
+defaultHeaders:
+  Accept: "application/json"
+
+maskedHeaders:
+  - Authorization
+  - X-Api-Key
+
+maskedJsonFields:
+  - password
+  - secret
+  - token
+  - clientSecret
+
+timeouts:
+  connectTimeoutMs: 10000
+  socketTimeoutMs: 30000
+  connectionRequestTimeoutMs: 10000
+
+proxy:
+  enabled: false
+
+retry:
+  enabled: false
+
+tls:
+  mode: "DEFAULT"
+  enabledProtocols: ["TLSv1.2", "TLSv1.3"]

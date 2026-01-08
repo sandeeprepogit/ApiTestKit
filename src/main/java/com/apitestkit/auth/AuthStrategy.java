@@ -1,4 +1,9 @@
+
 package com.apitestkit.auth;
 
-public class AuthStrategy {
+import io.restassured.specification.RequestSpecification;
+
+@FunctionalInterface
+public interface AuthStrategy {
+    RequestSpecification apply(RequestSpecification spec);
 }
